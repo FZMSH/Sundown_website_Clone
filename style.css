@@ -1,0 +1,487 @@
+@font-face {
+    font-family: sundown;
+    src: url(./Sundown_website_font_2.ttf);
+}
+@font-face {
+    font-family: sundown;
+    font-weight: 100;
+    src: url(./sundown_website_font.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "sundown";
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #EFEAE3;
+}
+
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0vw 2vw;
+}
+nav{
+    position: relative;
+    padding: 2vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+   
+}
+nav img{
+    width: 10vw;
+}
+#nav-part-2{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+#nav-part-2 h4{
+    position: relative;
+    border: 1px solid #554d4d;
+    border-radius: 1vw;
+    padding: .8vw 1.2vw;
+    font-family: "sundown";
+    font-weight: 500;
+    transition: all ease 0.3s;
+   overflow: hidden;
+}
+#nav-part-2 a{
+ text-decoration: none;
+ color: #221e1e;
+ position: relative;
+ z-index: 9;
+}
+#nav-part-2 h4:hover a{
+    color: #fff;
+}
+#nav-part-2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+#nav-part-2 h4:hover::after{
+ bottom: 0;
+ border-radius: 0;
+}
+
+nav h3{
+    display: none;
+}
+
+#center{
+    
+    height: 74vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 0vw 2vw;
+    justify-content: space-between;
+    border-bottom: 1px solid #dbc3c3;
+   
+}
+
+#left-div{
+    width: 19vw;
+   font-size: 1.2vw;
+}
+
+#right-div h1{
+  font-size: 10vw;
+  line-height: 9vw;
+  text-align: right;
+}
+#video-div{
+    margin-bottom: 5vw;
+}
+#page1 video{
+    position: relative;
+    border-radius: 1.6vw;
+    margin-top: 3vw;
+    width: 100%;
+}
+
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 81vh;
+}
+
+#hero-1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FE330A;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(1.5vw);
+}
+
+#hero-2{
+   position: absolute;
+    width: 30vw;
+    height: 30vw;
+    background-color: #FE330A;
+    border-radius: 50%;
+    filter: blur(1.5vw);
+}
+
+#hero-3{
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    background:linear-gradient(#FE330A,#f34a28);
+    border-radius: 50%;
+    filter: blur(1.5vw);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction:alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(5%,55%);
+    }
+    to{
+        transform: translate(3%,-10%);
+    }
+    
+}
+
+/* page2  */
+
+#page2{
+    min-height: 55vh;
+    width: 100%;
+    background-color:#EFEAE3;
+}
+
+#moving-text{
+    overflow-x: auto ;
+    width: 100%;
+    white-space: nowrap;
+}
+/* remove scrollbar which is annyoing */
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+#gola{
+    background-color: #f34a28;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    margin: 0 1vw;
+    display: inline-block;
+
+}
+#con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+   
+}
+#con h1{
+    font-size: 5vw;
+   display: inline-block;
+}
+
+@keyframes move {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+/* page2-bottom h1,img,p  */
+#page2-bottom{
+    position: relative;
+    padding: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9;
+}
+
+#page2-bottom h1{
+ width: 47vw;
+ font-size: 4vw;
+ line-height: 4vw;
+ z-index: 10;
+}
+
+#page2-img-p{
+    width: 21vw;
+    transform: translateY(5vw);
+    
+}
+#page2-img-p p{
+    width: 100%;
+    font-family: "sundown";
+    font-weight: 100;
+}
+#page2-img-p img{
+    border-radius: 1vw;
+    width: 100%;
+    margin-bottom: 1vw;
+}
+#biggola{
+    width: 30vw;
+    height: 60vh;
+    position: absolute;
+    background: linear-gradient(to top right,#FE330A,#fe4f0a);
+    border-radius: 50%;
+    top: 54%;
+    left: 15%;
+    filter: blur(1.1vw);
+    animation-name: biggola1;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+@keyframes biggola1 {
+    from{
+        transform: translate(3%,-3%) skew(0);
+    }
+    to{
+        transform: translate(-3%,3%)skew(-11deg);
+    }
+    
+}
+
+/* #page3 */
+
+.page3{
+    margin-top: 12vw;
+    min-height: 100vh;
+    width: 100%;
+    
+
+}
+#elem{
+    height: 14.3vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+    border-bottom: 1px solid #897d7d;
+    
+}
+#elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+#overlay-elem{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #FF9831;
+    left: 0;
+    top: -100%;
+    transition: all ease .5s;
+}
+#elem:hover #overlay-elem{
+    top: 0;
+}
+
+.fixed-element{
+    position: fixed;
+    top: 15vw;
+    width: 19vw;
+    height: 55vh;
+    left: 58%;
+    z-index: 99;
+    border-radius: 1vw;
+    display: none;
+    
+    
+}
+
+.page4{
+    height: 100vh;
+    width: 100%;
+    padding: 8vw 2vw;
+}
+/* swipper animation slider effect start */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-wrapper>.swiper-slide {
+    width: 40%;
+  }
+
+  #full-scr{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    background-color: #d3ababb9;
+    transition: all ease 0.5s;
+  }
+  #full-div1{
+    height: 50%;
+    width: 100%;
+    background-color: #EFEAE3;
+    border-bottom-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+  }
+  #loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+   transition: all ease 0.5s;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+  }
+  #loader h1{
+    font-size: 4vw;
+    color: transparent;
+    background:linear-gradient(to right,orange,orangered);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay:1s ;
+    animation-timing-function: linear;
+  }
+  #loader h1:nth-child(2){
+    animation-delay: 2s;
+  }
+  #loader h1:nth-child(3){
+    animation-delay: 3s;
+  }
+
+  @keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+
+
+
+/* swipper animation slider effect end  */
+
+
+/* Responsive start down below */
+
+@media (max-width:600px) {
+    #page1{
+        padding: 0vw 0vw;
+    }
+    nav{
+        padding: 8vw 5vw;
+        background-color: #EFEAE3;
+    }
+    #nav-part-2{
+        display: none;
+    }
+    nav img{
+        width: 23vw;
+    }
+    nav h3{
+        display: block;
+        padding: 2vw 5vw;
+        border: 1px solid #ababab;
+        border-radius: 2vw;
+        font-size: 4vw;
+        font-weight: 200;
+        padding-left: 10vw;
+    }
+    
+    #center{
+       
+        height: 65vh;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        padding: 0vw 2vw;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        border-bottom: 1px solid #dbc3c3;
+        
+       
+    }
+    #left-div{
+       padding-right: 2vw;
+       width:93%;
+       height: 20vh;
+      
+    }
+    #left-div h3{
+        padding-top: 2.6vw;
+        font-size: 5.1vw;
+        padding-right: 3vw;
+    }
+    #right-div h1{
+      font-size: 17vw;
+      line-height: 15vw;
+      text-align: right
+    }
+    #video-div{
+        margin-bottom: 5vw;
+    }
+    
+}
